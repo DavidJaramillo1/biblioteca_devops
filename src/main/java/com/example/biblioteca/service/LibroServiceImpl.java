@@ -34,5 +34,5 @@ public class LibroServiceImpl implements LibroService{
     public void eliminarLibro(Long id) {
         libroRepository.deleteById(id);
     }
-    
+
 }
