@@ -1,5 +1,11 @@
 package com.example.biblioteca.entity;
 
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Data // Evita definir los getters y setters
 @Entity
 @NoArgsConstructor
@@ -8,7 +14,7 @@ package com.example.biblioteca.entity;
 public class Libro {
 
     @Id
-    @GenerateValue(strategy = GenerationType.IDENTITY) // Se genera de forma automatica
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Se genera de forma automatica
     private Long id;
 
     @Column(nullable = false) // Al ponerlo posterior, hayq que modificar la propiedad
