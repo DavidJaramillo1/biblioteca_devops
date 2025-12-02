@@ -25,7 +25,10 @@ pipeline{
 
                     stage('Maven clean'){
                     steps {
-                   bat 'mvn clean'
+
+                    withMaven(maven: 'Maven3.9.11') {
+                               sh "mvn clean"
+                           }
                     }
                     }
 
