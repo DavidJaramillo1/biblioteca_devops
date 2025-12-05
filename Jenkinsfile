@@ -43,7 +43,7 @@ pipeline{
 
                     }
 
-                    stage('Copiar ficheros '){
+                    stage('Copiar ficheros'){
                     steps{
                     bat 'xcopy /Y ".\\target\\*.jar" ".\\"v%VERSION_BACK%"'
                     }
