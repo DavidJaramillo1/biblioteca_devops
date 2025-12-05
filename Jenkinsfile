@@ -43,9 +43,9 @@ pipeline{
 
                     }
 
-                    stage('Mover '){
+                    stage('Copiar ficheros '){
                     steps{
-                    bat "rmdir *.* v%VERSION_BACK%\\"
+                    bat 'xcopy /Y ".\\target\\*.jar" ".\\"v%VERSION_BACK%"'
                     }
                     }
 
