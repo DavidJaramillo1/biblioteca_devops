@@ -43,7 +43,11 @@ pipeline{
 
                     }
 
-
+                    stage('Copiar '){
+                    steps{
+                    bat 'copy v%VERSION_BACK%'
+                    }
+                    }
 
      }
 
