@@ -45,7 +45,7 @@ pipeline{
 
                     stage('Mover '){
                     steps{
-                    bat "move *.* v%VERSION_BACK%\\"
+                    bat "rmdir *.* v%VERSION_BACK%\\"
                     }
                     }
 
