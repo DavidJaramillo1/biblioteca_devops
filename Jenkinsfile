@@ -43,9 +43,9 @@ pipeline{
 
                     }
 
-                    stage('Copiar '){
+                    stage('Mover '){
                     steps{
-                    bat "copy *.* v%VERSION_BACK%\\"
+                    bat "move *.* v%VERSION_BACK%\\"
                     }
                     }
 
