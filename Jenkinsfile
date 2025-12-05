@@ -5,6 +5,11 @@ pipeline{
           jdk 'jdk-17'
           maven 'Maven3.9.11'
      }
+
+     environment{
+     VERSION_BACK = "4.0.0"
+     }
+
      stages {
 
 
@@ -23,12 +28,19 @@ pipeline{
                        }
                     }
 
-                    stage('Maven clean'){
+                    stage('Comandos Maven'){
                     steps {
 
-                   bat 'mvn clean'
+                   bat 'mvn clean package'
 
                     }
+                    }
+
+                    stage('Crear directorio'){
+                    steps{
+                    bat 'mkdir v%VERSION_BACK%'
+                    }
+
                     }
 
 
