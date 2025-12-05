@@ -10,8 +10,8 @@ pipeline{
 
           stage('Show messages'){
              steps {
-                echo "Primer stage del pipeline"
-                echo "A continuación hacemos checkout del proyecto"
+               bat 'echo "Primer stage del pipeline"'
+               bat 'echo "A continuación hacemos checkout del proyecto"'
              }
           }
 
@@ -26,9 +26,8 @@ pipeline{
                     stage('Maven clean'){
                     steps {
 
-                    withMaven(maven: 'Maven3.9.11') {
-                               sh "mvn clean"
-                           }
+                   bat 'mvn clean'
+
                     }
                     }
 
